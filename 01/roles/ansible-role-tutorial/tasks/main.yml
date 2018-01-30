@@ -1,0 +1,18 @@
+---
+- name: Install our packages!
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ my_packages }}"
+
+- name: Remove packages
+  package:
+    name: "{{ item }}"
+    state: absent
+  with_items:
+    - emacs
+    - nano
+
+- import_tasks: tom_and_phil.yml
+...
