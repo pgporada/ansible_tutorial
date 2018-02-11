@@ -1,0 +1,37 @@
+---
+driver:
+  name: vagrant
+  use_sudo: false
+  forward_agent: true
+
+provisioner:
+  hosts: test-kitchen
+  name: ansible_playbook
+  require_ansible_repo: true
+  ansible_yum_repo: epel
+  require_ansible_omnibus: false
+  ansible_verbose: true
+  ansible_verbosity: 1
+  ansible_diff: true
+  require_chef_for_busser: true
+  update_package_repos: false
+
+platforms:
+  - name: centos-7
+    driver:
+      box: centos/7
+      provision: true
+      vagrantfiles:
+        - .vagrant-centos.rb
+  - name: debian-stretch
+    driver:
+      box: debian/stretch64
+      provision: true
+      vagrantfiles:
+        - .vagrant-debian.rb
+      custom_pre_install_command: >
+        export DEBIAN_FRONTEND=noninteractive
+
+suites:
+  - name: default
+...
