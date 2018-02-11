@@ -3,6 +3,7 @@
 We're going to build a role and test it. This will be far more involved than the previous lesson. The final role will be located [here](https://github.com/pgporada/ansible-role-vim).
 
 We'll be covering
+* [Variable precedence](https://docs.ansible.com/ansible/latest/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable)
 * [Conditionals](https://docs.ansible.com/ansible/latest/playbooks_conditionals.html)
 * [Loops](https://docs.ansible.com/ansible/latest/playbooks_loops.html)
 * [Testing](https://github.com/test-kitchen/test-kitchen/wiki/Getting-Started)

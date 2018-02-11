@@ -1,18 +1,31 @@
 ---
 - name: Ansible Tutorial 2
   hosts: fleet
+
   pre_tasks:
     - command: date
+      changed_when: "False"
       register: result
+      delegate_to: 127.0.0.1
+      run_once: "True"
+
     - debug:
-        var: result
+        var: result.stdout
+      delegate_to: 127.0.0.1
+      run_once: "True"
 
   roles:
     - ./roles/ansible-role-vim
 
   post_tasks:
     - command: date
+      changed_when: "False"
       register: result
+      delegate_to: 127.0.0.1
+      run_once: "True"
+
     - debug:
-        var: result
+        var: result.stdout
+      delegate_to: 127.0.0.1
+      run_once: "True"
 ...
