@@ -1,0 +1,6 @@
+---
+- name: Our first playbook
+  hosts: fleet
+  roles:
+    - ./roles/ansible-role-tutorial
+...
