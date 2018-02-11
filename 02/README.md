@@ -40,6 +40,11 @@ Run the test harness which will run ansible against the target systems as config
     bundle exec kitchen verify
     bundle exec kitchen destroy -c2
 
+Actually deploy this role to some servers instead of vagrant VMs
+
+    ansible-playbook playbook.yml --check --diff
+    ansible-playbook playbook.yml
+
 - - - -
 # Author
 (C) 2018 [Phil Porada](https://philporada.com)

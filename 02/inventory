@@ -6,13 +6,18 @@ centos
 debian
 
 [debian]
-192.168.3.11
+debian-9-1 ansible_host=192.168.3.111
+debian-9-2 ansible_host=192.168.3.122
 
 [debian:vars]
-ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=thomas
+ansible_connection=ssh
+ansible_ssh_user=root
+ansible_ssh_pass=thomas
 
 [centos]
-192.168.3.
+centos-7-1 ansible_host=192.168.3.70
 
 [centos:vars]
-ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=thomas
+ansible_connection=ssh
+ansible_ssh_user=root
+ansible_ssh_pass=lawrencesystems
