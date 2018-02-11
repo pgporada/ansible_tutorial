@@ -42,8 +42,8 @@ Run the test harness which will run ansible against the target systems as config
 
 Actually deploy this role to some servers instead of vagrant VMs
 
-    ansible-playbook playbook.yml --check --diff
-    ansible-playbook playbook.yml
+    ansible-playbook -i inventory playbook.yml --check --diff
+    ansible-playbook -i inventory playbook.yml
 
 - - - -
 # Author
