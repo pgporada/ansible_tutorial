@@ -1,8 +1,18 @@
 ---
 - name: Ansible Tutorial 2
   hosts: fleet
-  tasks:
-    - ping:
+  pre_tasks:
+    - command: date
+      register: result
+    - debug:
+        var: result
+
   roles:
     - ./roles/ansible-role-vim
+
+  post_tasks:
+    - command: date
+      register: result
+    - debug:
+        var: result
 ...

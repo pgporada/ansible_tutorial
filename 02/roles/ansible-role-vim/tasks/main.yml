@@ -1,0 +1,8 @@
+---
+- name: Install vim and git
+  become: true
+  become_method: sudo
+  package:
+    name: vim
+    state: present
+...
