@@ -2,15 +2,17 @@
 localhost ansible_connection=local
 
 [fleet:children]
-steve
-tom
-phil
+centos
+debian
 
-[steve]
-192.168.3.77 ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=thomas
+[debian]
+192.168.3.11
 
-[tom]
-192.168.3.97 ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=thomas
+[debian:vars]
+ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=thomas
 
-[phil]
-192.168.3.177 ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=thomas
+[centos]
+192.168.3.
+
+[centos:vars]
+ansible_connection=ssh ansible_ssh_user=root ansible_ssh_pass=thomas

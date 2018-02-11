@@ -1,6 +1,6 @@
 ---
-- name: Our first playbook
+- name: Ansible Tutorial 2
   hosts: fleet
   roles:
-    - ./roles/ansible-role-tutorial
+    - ./roles/ansible-role-vim
 ...
