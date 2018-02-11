@@ -14,8 +14,7 @@ We'll be covering
 You will need [vagrant](https://www.vagrantup.com/) and the latest virtualbox. You can either download this manually or use my ansible code to install Vagrant for you. As always, please review any foreign code before you run it. Would you trust me? I would trust me.
 
     # Source code: https://github.com/pgporada/ansible-role-vagrant
-    sudo ansible-galaxy install pgporada.vagrant
-    ansible-playbook pgporada.vagrant --ask-become-password
+    git clone https://github.com/pgporada/ansible-role-vim.git roles/ansible-role-vim
 
 You will also need to install a working ruby environment to run tests. I prefer to use [kitchen](https://kitchen.ci/).
 
